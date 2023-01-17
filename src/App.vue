@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-  <h1>goal</h1>
+  <h1>vue learning goals</h1>
    <input type="text" v-model="enteredValue"></input>
    <button @click="addGoal()"> add goals
       </button>
@@ -8,6 +8,7 @@
    <li v-for = "goal in goals">{{goal}}
    </li > 
    </ul>
+   <p>learn <a v-bind:href="vuelink"> vue</a></p>
   </div>
 </template>
 
@@ -17,7 +18,8 @@ export default {
   data() {
       return {
         goals: [],
-        enteredValue: ''
+        enteredValue: '',
+        vuelink :'https://vuejs.org/tutorial/#step-1'
       }},
 
   methods : 
